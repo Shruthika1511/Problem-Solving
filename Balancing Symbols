@@ -1,0 +1,59 @@
+//BALANCING SYMBOLS
+
+import java.util.*;
+public class Balancingsymbol{
+    public static void main(String[] args)
+    {
+        String exp;
+        int i,len;
+        char ch;
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the String:");
+        exp=s.next();
+        Stack<Character>stack=new Stack<Character>();
+        len=exp.length();
+        for(i=0;i<len;i++)
+        {
+            ch=exp.charAt(i);
+            if(ch=='('|| ch=='{'|| ch=='[')
+            {
+                stack.push(ch);
+            }
+            else if(ch==')') {
+            if (stack.isEmpty() || stack.pop() != '(') {
+                System.out.println("\nUnbalanced Parentheses!");
+                return;
+            }
+            }
+            else if(ch=='}') {
+            if (stack.isEmpty() || stack.pop() != '{') {
+                System.out.println("\nUnbalanced Parentheses!");
+                return;
+            }
+            }
+            else if(ch==']')
+            {
+            if(stack.isEmpty() || stack.pop() != '[')
+            {
+                System.out.println("\nUnbalanced Parentheses!");
+                return;
+            }
+            }
+        }
+        if(stack.isEmpty())
+            System.out.println("\nBalanced Parentheses.");
+}
+}
+
+
+//OUTPUT:
+
+/*Enter the String:
+{[({}]}
+
+Unbalanced Parentheses!*/
+
+/*Enter the String:
+{()[]{}}
+
+Balanced Parentheses.*/
