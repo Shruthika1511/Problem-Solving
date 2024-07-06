@@ -1,0 +1,29 @@
+//CHECK WHETHER THE GIVEN NUMBER IS POSITIVE OR NEGATIVE NUMBER, ZERO
+
+public class Posneg {
+    public static void main(String[] args){
+        int num=0;
+        if(num>0)
+        {
+            System.out.println("Positive Number");
+        }
+        else if(num<0)
+        {
+            System.out.println("Negative");
+        }
+        else
+        {
+            System.out.println("Zero");
+        }
+    }
+}
+
+EXAMPLE
+* num=11
+positive
+
+*num=-11
+negative
+
+*num=0
+zero
