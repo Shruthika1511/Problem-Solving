@@ -1,0 +1,17 @@
+// check negative or positive number using ternary operator
+
+public class TernaryPosNeg {
+    public static void main(String[] args)
+    {
+        int num=11;
+        if(num==0)
+        {
+            System.out.println("Zero");
+        }
+        else
+        {
+            String res=(num>0) ? "PositiveNumber":"NegativeNumber";
+            System.out.println(res);
+        }
+    }
+}
